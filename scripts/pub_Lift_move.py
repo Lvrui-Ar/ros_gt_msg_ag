@@ -37,7 +37,7 @@ def move_lift(time, pub, control,mode):
         dopub(pub,control)
         if control.mode == 0x01:
             mode = "位置模式"
-            rospy.loginfo(f"升降台控制模式为{mode},幅度是{control.data/10}mm")
+            rospy.loginfo(f"升降台控制模式为{mode},目标位置是{control.data/10}mm")
         elif control.mode == 0x02:
             mode = "速度模式"
             rospy.loginfo(f"升降台控制模式为{mode},速度是{control.data}rpm")

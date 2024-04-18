@@ -21,7 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
+catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -144,7 +144,7 @@ link_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(example_01 examples/example_01.cpp)
+# add_executable(example_01 examples/example_01.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -158,10 +158,9 @@ add_executable(example_01 examples/example_01.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(example_01
-
-  ${catkin_LIBRARIES}
-)
+# target_link_libraries(example_01
+  # ${catkin_LIBRARIES}
+# )
 
 #############
 ## Install ##
@@ -175,6 +174,12 @@ target_link_libraries(example_01
 catkin_install_python(PROGRAMS
   scripts/pub_gt_move.py
   scripts/pub_Lift_move.py
+  examples/gt_test/gt_1sec.py
+  examples/gt_test/gt_move_linear.py
+  examples/gt_test/gt_move_wheel.py
+  examples/lift_test/lift_position.py
+  examples/lift_test/lift_speed.py
+  examples/gt_test/gt_time.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
