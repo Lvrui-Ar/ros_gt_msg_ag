@@ -68,8 +68,8 @@ def dopub(pub, control):
         pub.publish(control)  # 发布控制消息
     except Exception as e:
         rospy.logerr(f"指令发布失败:{str(e)}")  # 记录发布的异常信息
-    du_x = rospy.Duration(1)
-    rospy.sleep(du_x)
+    # du_x = rospy.Duration(1)
+    rospy.sleep(1)
 
 def move(time, direction, pub, control, speed):
     """

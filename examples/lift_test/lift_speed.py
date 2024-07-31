@@ -1,6 +1,6 @@
 import rospy
 from ros_gt_msg.msg import Lift_control
-from package import Controlfunc_Lift
+from src.package import Controlfunc_Lift
 
 if __name__ == '__main__':
     rospy.init_node('lift_control_node_speed')

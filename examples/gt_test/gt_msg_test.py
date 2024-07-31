@@ -1,7 +1,7 @@
 # 本文件测试gt_motion.msg的参数意思
 import rospy
 from ros_gt_msg.msg import gt_control
-from package import Controlfunc_gt
+from src.package import Controlfunc_gt
 
 
 if __name__ == "__main__":

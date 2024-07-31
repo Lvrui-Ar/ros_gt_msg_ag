@@ -179,7 +179,7 @@ catkin_install_python(PROGRAMS
   examples/gt_test/gt_move_wheel.py
   examples/lift_test/lift_position.py
   examples/lift_test/lift_speed.py
-  examples/gt_test/gt_time.py
+  examples/gt_move.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -225,5 +225,4 @@ add_executable(ros_gt_msg src/ros_gt_msg.cpp)
 
 target_link_libraries(ros_gt_msg ${catkin_LIBRARIES} libcontrolcan.so)
 #target_link_libraries(vel_top ${catkin_LIBRARIES})
-
 
